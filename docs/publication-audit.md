@@ -4,7 +4,7 @@
 
 |確認項目|結果|確認内容|
 |---|---|---|
-|Secret|PASS|既知のtoken・秘密鍵パターン0件、空の.env.exampleのみ。履歴もcommit後に再確認|
+|Secret|PASS|既知のtoken・秘密鍵パターン0件、空の.env.exampleのみ。commit後の履歴57個の固有blobも検出0件|
 |個人情報|PASS（確認範囲内）|公開データ9,935文字列のメール・電話番号・個人パス検出0件。作者プロフィール、生README/Issueなし。テストのメールはexample.org/example.invalid、URL認証情報も架空値|
 |絶対パス|PASS|個人ディレクトリ・一時ディレクトリ・Windows個人パスの混入0件|
 |Fixture分離|PASS|data内3 JSONはlive、examples内JSONはfixture。公開buildはFixtureを拒否|
@@ -22,6 +22,6 @@ Apache原文SHA-256: `cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc
 
 実APIの前回成功は匿名GitHub GET、100件取得・97件重複排除後評価・3件深掘り・11要求。認証付きリモート取得、CI、日次保存、Pages配信は公開後に別途記録します。初回ブラウザ試験はacceptance-results.mdに記載し、リモート未実施をPASSへ転記しません。
 
-費用を伴う設定変更・有料サービス利用は0件。アカウント保存枠の無料条件を読取確認するまで日次workflowの有効化を禁止します。未確認の場合はその操作をHOLDにします。
+費用を伴う設定変更・有料サービス利用は0件。GitHub Free、無料保存枠の余裕、既存予算による追加支出の停止を読み取り確認しました。課金設定を変更せずに無料条件を満たしています。将来この条件を確認できなくなった場合はその操作をHOLDにします。
 
 公開結果の正本はRELEASE_STATUS.jsonです。機械走査で未知形式の秘密値やあらゆる個人情報の不存在を保証するものではありません。

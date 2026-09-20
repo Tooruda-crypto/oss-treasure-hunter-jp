@@ -35,14 +35,16 @@
     "status": "SUCCESS"
   },
   "paidOperations": 0,
-  "externalPublicationOperations": 0,
+  "externalPublicationOperations": 1,
   "knownUnresolvedBlockers": [],
   "notTested": [
     "authenticated_live_api",
     "remote_ci",
     "remote_daily_persistence_and_pages",
-    "physical_mobile_devices",
-    "target_account_free_storage"
+    "physical_mobile_devices"
   ],
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "repositoryCreated": true,
+  "visibility": "public",
+  "freeStorageGate": "VERIFIED_EXISTING_ZERO_SPEND_LIMIT_NO_BILLING_CHANGES"
 }
