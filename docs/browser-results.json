@@ -1,0 +1,58 @@
+{
+  "browser": "143.0.7499.4",
+  "basePath": "/site/",
+  "results": [
+    {
+      "name": "viewport_320_home_detail_direct_reload",
+      "status": "PASS"
+    },
+    {
+      "name": "viewport_375_home_detail_direct_reload",
+      "status": "PASS"
+    },
+    {
+      "name": "viewport_390_home_detail_direct_reload",
+      "status": "PASS"
+    },
+    {
+      "name": "viewport_768_home_detail_direct_reload",
+      "status": "PASS"
+    },
+    {
+      "name": "browser_filters",
+      "status": "PASS"
+    },
+    {
+      "name": "json_markdown_download",
+      "status": "PASS"
+    },
+    {
+      "name": "status_PARTIAL_preserves_previous",
+      "status": "PASS"
+    },
+    {
+      "name": "status_FAILED_preserves_previous",
+      "status": "PASS"
+    },
+    {
+      "name": "no_data",
+      "status": "PASS"
+    },
+    {
+      "name": "stale",
+      "status": "PASS"
+    },
+    {
+      "name": "browser_xss_and_unsafe_urls",
+      "status": "PASS"
+    },
+    {
+      "name": "fetch_error_not_empty",
+      "status": "PASS"
+    },
+    {
+      "name": "no_external_assets_or_console_errors",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+work/
+.cache/
+.hunt-lock/
+*.tmp
+*.log
+.DS_Store

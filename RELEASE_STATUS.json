@@ -1,0 +1,48 @@
+{
+  "project": "OTH-JP",
+  "version": "0.1.0",
+  "state": "PUBLICATION_APPROVED",
+  "meaning": "Final gate approved; local final audit and external release verification in progress",
+  "verifiedOn": "2026-09-20",
+  "specification": "OTH-JP-SPEC-001 v0.1",
+  "executionScope": "OTH-JP-START-001 Free GitHub Release v0.1",
+  "targetRepository": "Tooruda-crypto/oss-treasure-hunter-jp",
+  "targetDecision": "Public oss-treasure-hunter-jp authorized by the user; connected GitHub account used",
+  "licenseAdoption": "APPROVED",
+  "automatedTests": {
+    "pass": 49,
+    "fail": 0,
+    "skipped": 0
+  },
+  "fixtureBrowserChecks": {
+    "pass": 13,
+    "fail": 0
+  },
+  "liveBrowserViewports": [
+    320,
+    375,
+    390,
+    768,
+    1280
+  ],
+  "latestApiRun": {
+    "mode": "anonymous",
+    "scanned": 100,
+    "analyzed": 97,
+    "deepAnalyzed": 3,
+    "requests": 11,
+    "top": 1,
+    "status": "SUCCESS"
+  },
+  "paidOperations": 0,
+  "externalPublicationOperations": 0,
+  "knownUnresolvedBlockers": [],
+  "notTested": [
+    "authenticated_live_api",
+    "remote_ci",
+    "remote_daily_persistence_and_pages",
+    "physical_mobile_devices",
+    "target_account_free_storage"
+  ],
+  "license": "Apache-2.0"
+}

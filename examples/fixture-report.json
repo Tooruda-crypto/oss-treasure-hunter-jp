@@ -1,0 +1,692 @@
+{
+  "schemaVersion": 1,
+  "mode": "fixture",
+  "date": "2026-09-20",
+  "generatedAt": "2026-09-20T10:00:00.000Z",
+  "lastSuccessAt": "2026-09-20T10:00:00.000Z",
+  "runStatus": "SUCCESS",
+  "scoringVersion": "oth-jp-rules-0.1.0",
+  "scope": {
+    "scanned": 3,
+    "unique": 3,
+    "analyzed": 3,
+    "deepAnalyzed": 3,
+    "requests": 0,
+    "queries": [],
+    "auth": "fixture"
+  },
+  "errors": [],
+  "candidates": [
+    {
+      "repository": "fixture-org/sample-000",
+      "url": "https://github.com/fixture-org/sample-000",
+      "stars": 200,
+      "language": "JavaScript",
+      "category": "Automation",
+      "track": "fixture",
+      "status": "VALIDATE",
+      "exclusionReasons": [],
+      "score": {
+        "total": 37,
+        "evaluatedMax": 60,
+        "unevaluatedMax": 40,
+        "breakdown": {
+          "demand": {
+            "value": 10,
+            "max": 20,
+            "reason": "限定Issue: 1検出2点、コメント3件毎に最大2点、反応5件毎に最大2点。合計上限20。",
+            "evidenceIds": [
+              "fixture-org/sample-000:issues:6",
+              "fixture-org/sample-000:demand:4",
+              "fixture-org/sample-000:demand:5"
+            ]
+          },
+          "commercialGap": {
+            "value": null,
+            "max": 20,
+            "reason": "手動調査で提供あり3点、調査範囲内未確認12点。READMEの不検出のみでは加点しない。",
+            "evidenceIds": [
+              "fixture-org/sample-000:readme:2"
+            ]
+          },
+          "japanGap": {
+            "value": null,
+            "max": 20,
+            "reason": "需要＋90日以内の日本関連性・ローカライズ・競合調査が必要。各5点、最大15点。一般Web網羅不足の5点は付与しない。",
+            "evidenceIds": [
+              "fixture-org/sample-000:readme:2"
+            ]
+          },
+          "license": {
+            "value": 15,
+            "max": 15,
+            "reason": "SPDXファイル確認時のみ、商用化義務の摩擦に基づく固定表を適用。適法性の保証ではない。",
+            "evidenceIds": [
+              "fixture-org/sample-000:license:3"
+            ]
+          },
+          "feasibility": {
+            "value": 8,
+            "max": 15,
+            "reason": "高負荷領域の用語があれば2点、CLI明示は8点。それ以外は未評価。依存・コードは未監査。",
+            "evidenceIds": [
+              "fixture-org/sample-000:readme:2",
+              "fixture-org/sample-000:metadata:1"
+            ]
+          },
+          "monetization": {
+            "value": 4,
+            "max": 10,
+            "reason": "限定Issue需要と対応するGUIまたは導入支援の仮説に4点。支払意思は未検証。",
+            "evidenceIds": [
+              "fixture-org/sample-000:demand:4",
+              "fixture-org/sample-000:demand:5",
+              "fixture-org/sample-000:readme:2"
+            ]
+          }
+        },
+        "confidence": 0.36,
+        "confidenceMeaning": "根拠の範囲・鮮度に基づく内部指標。成功確率ではない。"
+      },
+      "license": {
+        "spdx": "MIT",
+        "friction": "LOW",
+        "points": 15,
+        "status": "IDENTIFIED",
+        "requirements": "著作権・許諾表示の保持",
+        "commercialUse": "POSSIBLE_SUBJECT_TO_TERMS",
+        "dependencyReview": "NOT_REVIEWED",
+        "trademark": "UNVERIFIED",
+        "manualReview": "REQUIRED_FOR_PRODUCT"
+      },
+      "commercial": {
+        "status": "UNVERIFIED",
+        "scope": "限定README＋投入された手動調査のみ"
+      },
+      "japan": {
+        "japaneseDocumentation": "NOT_FOUND_IN_README",
+        "competition": "UNVERIFIED",
+        "score": null,
+        "confidence": "LOW",
+        "qiita": "NOT_REQUESTED",
+        "zenn": "NOT_REQUESTED"
+      },
+      "monetizationType": "GUI",
+      "mvp": {
+        "kind": "HYPOTHESIS_TEMPLATE_NO_AI",
+        "workingName": "sample-000 向け導入支援案（仮称）",
+        "originalOSS": "https://github.com/fixture-org/sample-000",
+        "problem": "取得Issueの要望を顧客面談で再確認する",
+        "targetUser": "当該OSSの導入を検討する日本の小規模チーム（仮説）",
+        "productWedge": "GUI",
+        "requiredOSSModification": "最初は本体改変を避ける。必要性とライセンスを別途確認",
+        "requiredNewComponents": [
+          "日本語の導入手順",
+          "最小操作画面または設定テンプレート"
+        ],
+        "features": [
+          "1つの利用フロー",
+          "失敗時の説明",
+          "設定のエクスポート"
+        ],
+        "nonFeatures": [
+          "会員・決済",
+          "常時Hostedサービス",
+          "自動営業",
+          "全用途への対応"
+        ],
+        "ui": "日本語の最小操作画面（GUI仮説の場合）",
+        "architecture": "元OSSと薄い入出力層を分離。対象コードは本ツールで実行しない",
+        "hosting": "まず利用者PC。別製品のホスティング費用は別途検証",
+        "estimatedComplexity": "未見積もり。言語・依存・インフラの実装調査が必要",
+        "licenseRequirements": "著作権・許諾表示の保持",
+        "securityConsiderations": [
+          "入力検証",
+          "秘密情報の非保存",
+          "依存・実行権限の監査"
+        ],
+        "monetization": "GUI",
+        "pricingHypothesis": "未設定。支払意思の検証前に価格・売上を断定しない",
+        "validationPlan": [
+          "対象顧客3者に課題を確認",
+          "既存サービスと日本語代替を調査",
+          "手動デモで価値を確認"
+        ],
+        "developmentPhases": [
+          "権利と需要の確認",
+          "1フローの試作",
+          "受入試験"
+        ],
+        "acceptanceCriteria": [
+          "ライセンス・依存・商標確認を記録",
+          "対象者が主要操作を完了",
+          "競合との差を根拠付きで説明",
+          "費用上限と停止手順が明確"
+        ]
+      },
+      "evidence": [
+        {
+          "id": "fixture-org/sample-000:metadata:1",
+          "source": "github",
+          "type": "metadata",
+          "url": "https://github.com/fixture-org/sample-000",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "Stars 200; open issues 12; size 1234 KiB。Starsは得点に使用しない。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-000:readme:2",
+          "source": "github",
+          "type": "readme",
+          "url": "https://github.com/fixture-org/sample-000",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "限定README確認: CLI手掛かり=true; 日本語手掛かり=false; 商用提供の用語=false; 高負荷領域の用語=false。用語検出であり製品の有無の断定ではない。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-000:license:3",
+          "source": "github",
+          "type": "license",
+          "url": "https://api.github.com/repos/fixture-org/sample-000/license",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "SPDX=MIT; ファイル確認=OK; 依存・商標は未確認。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-000:demand:4",
+          "source": "github",
+          "type": "demand",
+          "url": "https://github.com/fixture-org/sample-000/issues/1",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "要望関連語を検出。コメント 6、リアクション 10。否定・文脈は未解釈。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-000:demand:5",
+          "source": "github",
+          "type": "demand",
+          "url": "https://github.com/fixture-org/sample-000/issues/2",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "要望関連語を検出。コメント 3、リアクション 5。否定・文脈は未解釈。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-000:issues:6",
+          "source": "github",
+          "type": "issues",
+          "url": "https://github.com/fixture-org/sample-000/issues",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "取得状態=OK; 最大10件、需要関連語の検出2件。全Issueの調査ではない。",
+          "weight": 1,
+          "confidence": 1
+        }
+      ],
+      "isNew": true,
+      "firstSeen": "2026-09-20",
+      "scoreChange": null
+    },
+    {
+      "repository": "fixture-org/sample-001",
+      "url": "https://github.com/fixture-org/sample-001",
+      "stars": 200,
+      "language": "JavaScript",
+      "category": "Automation",
+      "track": "fixture",
+      "status": "VALIDATE",
+      "exclusionReasons": [],
+      "score": {
+        "total": 37,
+        "evaluatedMax": 60,
+        "unevaluatedMax": 40,
+        "breakdown": {
+          "demand": {
+            "value": 10,
+            "max": 20,
+            "reason": "限定Issue: 1検出2点、コメント3件毎に最大2点、反応5件毎に最大2点。合計上限20。",
+            "evidenceIds": [
+              "fixture-org/sample-001:issues:6",
+              "fixture-org/sample-001:demand:4",
+              "fixture-org/sample-001:demand:5"
+            ]
+          },
+          "commercialGap": {
+            "value": null,
+            "max": 20,
+            "reason": "手動調査で提供あり3点、調査範囲内未確認12点。READMEの不検出のみでは加点しない。",
+            "evidenceIds": [
+              "fixture-org/sample-001:readme:2"
+            ]
+          },
+          "japanGap": {
+            "value": null,
+            "max": 20,
+            "reason": "需要＋90日以内の日本関連性・ローカライズ・競合調査が必要。各5点、最大15点。一般Web網羅不足の5点は付与しない。",
+            "evidenceIds": [
+              "fixture-org/sample-001:readme:2"
+            ]
+          },
+          "license": {
+            "value": 15,
+            "max": 15,
+            "reason": "SPDXファイル確認時のみ、商用化義務の摩擦に基づく固定表を適用。適法性の保証ではない。",
+            "evidenceIds": [
+              "fixture-org/sample-001:license:3"
+            ]
+          },
+          "feasibility": {
+            "value": 8,
+            "max": 15,
+            "reason": "高負荷領域の用語があれば2点、CLI明示は8点。それ以外は未評価。依存・コードは未監査。",
+            "evidenceIds": [
+              "fixture-org/sample-001:readme:2",
+              "fixture-org/sample-001:metadata:1"
+            ]
+          },
+          "monetization": {
+            "value": 4,
+            "max": 10,
+            "reason": "限定Issue需要と対応するGUIまたは導入支援の仮説に4点。支払意思は未検証。",
+            "evidenceIds": [
+              "fixture-org/sample-001:demand:4",
+              "fixture-org/sample-001:demand:5",
+              "fixture-org/sample-001:readme:2"
+            ]
+          }
+        },
+        "confidence": 0.36,
+        "confidenceMeaning": "根拠の範囲・鮮度に基づく内部指標。成功確率ではない。"
+      },
+      "license": {
+        "spdx": "MIT",
+        "friction": "LOW",
+        "points": 15,
+        "status": "IDENTIFIED",
+        "requirements": "著作権・許諾表示の保持",
+        "commercialUse": "POSSIBLE_SUBJECT_TO_TERMS",
+        "dependencyReview": "NOT_REVIEWED",
+        "trademark": "UNVERIFIED",
+        "manualReview": "REQUIRED_FOR_PRODUCT"
+      },
+      "commercial": {
+        "status": "UNVERIFIED",
+        "scope": "限定README＋投入された手動調査のみ"
+      },
+      "japan": {
+        "japaneseDocumentation": "NOT_FOUND_IN_README",
+        "competition": "UNVERIFIED",
+        "score": null,
+        "confidence": "LOW",
+        "qiita": "NOT_REQUESTED",
+        "zenn": "NOT_REQUESTED"
+      },
+      "monetizationType": "GUI",
+      "mvp": {
+        "kind": "HYPOTHESIS_TEMPLATE_NO_AI",
+        "workingName": "sample-001 向け導入支援案（仮称）",
+        "originalOSS": "https://github.com/fixture-org/sample-001",
+        "problem": "取得Issueの要望を顧客面談で再確認する",
+        "targetUser": "当該OSSの導入を検討する日本の小規模チーム（仮説）",
+        "productWedge": "GUI",
+        "requiredOSSModification": "最初は本体改変を避ける。必要性とライセンスを別途確認",
+        "requiredNewComponents": [
+          "日本語の導入手順",
+          "最小操作画面または設定テンプレート"
+        ],
+        "features": [
+          "1つの利用フロー",
+          "失敗時の説明",
+          "設定のエクスポート"
+        ],
+        "nonFeatures": [
+          "会員・決済",
+          "常時Hostedサービス",
+          "自動営業",
+          "全用途への対応"
+        ],
+        "ui": "日本語の最小操作画面（GUI仮説の場合）",
+        "architecture": "元OSSと薄い入出力層を分離。対象コードは本ツールで実行しない",
+        "hosting": "まず利用者PC。別製品のホスティング費用は別途検証",
+        "estimatedComplexity": "未見積もり。言語・依存・インフラの実装調査が必要",
+        "licenseRequirements": "著作権・許諾表示の保持",
+        "securityConsiderations": [
+          "入力検証",
+          "秘密情報の非保存",
+          "依存・実行権限の監査"
+        ],
+        "monetization": "GUI",
+        "pricingHypothesis": "未設定。支払意思の検証前に価格・売上を断定しない",
+        "validationPlan": [
+          "対象顧客3者に課題を確認",
+          "既存サービスと日本語代替を調査",
+          "手動デモで価値を確認"
+        ],
+        "developmentPhases": [
+          "権利と需要の確認",
+          "1フローの試作",
+          "受入試験"
+        ],
+        "acceptanceCriteria": [
+          "ライセンス・依存・商標確認を記録",
+          "対象者が主要操作を完了",
+          "競合との差を根拠付きで説明",
+          "費用上限と停止手順が明確"
+        ]
+      },
+      "evidence": [
+        {
+          "id": "fixture-org/sample-001:metadata:1",
+          "source": "github",
+          "type": "metadata",
+          "url": "https://github.com/fixture-org/sample-001",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "Stars 200; open issues 12; size 1234 KiB。Starsは得点に使用しない。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-001:readme:2",
+          "source": "github",
+          "type": "readme",
+          "url": "https://github.com/fixture-org/sample-001",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "限定README確認: CLI手掛かり=true; 日本語手掛かり=false; 商用提供の用語=false; 高負荷領域の用語=false。用語検出であり製品の有無の断定ではない。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-001:license:3",
+          "source": "github",
+          "type": "license",
+          "url": "https://api.github.com/repos/fixture-org/sample-001/license",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "SPDX=MIT; ファイル確認=OK; 依存・商標は未確認。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-001:demand:4",
+          "source": "github",
+          "type": "demand",
+          "url": "https://github.com/fixture-org/sample-001/issues/1",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "要望関連語を検出。コメント 6、リアクション 10。否定・文脈は未解釈。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-001:demand:5",
+          "source": "github",
+          "type": "demand",
+          "url": "https://github.com/fixture-org/sample-001/issues/2",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "要望関連語を検出。コメント 3、リアクション 5。否定・文脈は未解釈。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-001:issues:6",
+          "source": "github",
+          "type": "issues",
+          "url": "https://github.com/fixture-org/sample-001/issues",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "取得状態=OK; 最大10件、需要関連語の検出2件。全Issueの調査ではない。",
+          "weight": 1,
+          "confidence": 1
+        }
+      ],
+      "isNew": true,
+      "firstSeen": "2026-09-20",
+      "scoreChange": null
+    },
+    {
+      "repository": "fixture-org/sample-002",
+      "url": "https://github.com/fixture-org/sample-002",
+      "stars": 200,
+      "language": "JavaScript",
+      "category": "Automation",
+      "track": "fixture",
+      "status": "VALIDATE",
+      "exclusionReasons": [],
+      "score": {
+        "total": 37,
+        "evaluatedMax": 60,
+        "unevaluatedMax": 40,
+        "breakdown": {
+          "demand": {
+            "value": 10,
+            "max": 20,
+            "reason": "限定Issue: 1検出2点、コメント3件毎に最大2点、反応5件毎に最大2点。合計上限20。",
+            "evidenceIds": [
+              "fixture-org/sample-002:issues:6",
+              "fixture-org/sample-002:demand:4",
+              "fixture-org/sample-002:demand:5"
+            ]
+          },
+          "commercialGap": {
+            "value": null,
+            "max": 20,
+            "reason": "手動調査で提供あり3点、調査範囲内未確認12点。READMEの不検出のみでは加点しない。",
+            "evidenceIds": [
+              "fixture-org/sample-002:readme:2"
+            ]
+          },
+          "japanGap": {
+            "value": null,
+            "max": 20,
+            "reason": "需要＋90日以内の日本関連性・ローカライズ・競合調査が必要。各5点、最大15点。一般Web網羅不足の5点は付与しない。",
+            "evidenceIds": [
+              "fixture-org/sample-002:readme:2"
+            ]
+          },
+          "license": {
+            "value": 15,
+            "max": 15,
+            "reason": "SPDXファイル確認時のみ、商用化義務の摩擦に基づく固定表を適用。適法性の保証ではない。",
+            "evidenceIds": [
+              "fixture-org/sample-002:license:3"
+            ]
+          },
+          "feasibility": {
+            "value": 8,
+            "max": 15,
+            "reason": "高負荷領域の用語があれば2点、CLI明示は8点。それ以外は未評価。依存・コードは未監査。",
+            "evidenceIds": [
+              "fixture-org/sample-002:readme:2",
+              "fixture-org/sample-002:metadata:1"
+            ]
+          },
+          "monetization": {
+            "value": 4,
+            "max": 10,
+            "reason": "限定Issue需要と対応するGUIまたは導入支援の仮説に4点。支払意思は未検証。",
+            "evidenceIds": [
+              "fixture-org/sample-002:demand:4",
+              "fixture-org/sample-002:demand:5",
+              "fixture-org/sample-002:readme:2"
+            ]
+          }
+        },
+        "confidence": 0.36,
+        "confidenceMeaning": "根拠の範囲・鮮度に基づく内部指標。成功確率ではない。"
+      },
+      "license": {
+        "spdx": "MIT",
+        "friction": "LOW",
+        "points": 15,
+        "status": "IDENTIFIED",
+        "requirements": "著作権・許諾表示の保持",
+        "commercialUse": "POSSIBLE_SUBJECT_TO_TERMS",
+        "dependencyReview": "NOT_REVIEWED",
+        "trademark": "UNVERIFIED",
+        "manualReview": "REQUIRED_FOR_PRODUCT"
+      },
+      "commercial": {
+        "status": "UNVERIFIED",
+        "scope": "限定README＋投入された手動調査のみ"
+      },
+      "japan": {
+        "japaneseDocumentation": "NOT_FOUND_IN_README",
+        "competition": "UNVERIFIED",
+        "score": null,
+        "confidence": "LOW",
+        "qiita": "NOT_REQUESTED",
+        "zenn": "NOT_REQUESTED"
+      },
+      "monetizationType": "GUI",
+      "mvp": {
+        "kind": "HYPOTHESIS_TEMPLATE_NO_AI",
+        "workingName": "sample-002 向け導入支援案（仮称）",
+        "originalOSS": "https://github.com/fixture-org/sample-002",
+        "problem": "取得Issueの要望を顧客面談で再確認する",
+        "targetUser": "当該OSSの導入を検討する日本の小規模チーム（仮説）",
+        "productWedge": "GUI",
+        "requiredOSSModification": "最初は本体改変を避ける。必要性とライセンスを別途確認",
+        "requiredNewComponents": [
+          "日本語の導入手順",
+          "最小操作画面または設定テンプレート"
+        ],
+        "features": [
+          "1つの利用フロー",
+          "失敗時の説明",
+          "設定のエクスポート"
+        ],
+        "nonFeatures": [
+          "会員・決済",
+          "常時Hostedサービス",
+          "自動営業",
+          "全用途への対応"
+        ],
+        "ui": "日本語の最小操作画面（GUI仮説の場合）",
+        "architecture": "元OSSと薄い入出力層を分離。対象コードは本ツールで実行しない",
+        "hosting": "まず利用者PC。別製品のホスティング費用は別途検証",
+        "estimatedComplexity": "未見積もり。言語・依存・インフラの実装調査が必要",
+        "licenseRequirements": "著作権・許諾表示の保持",
+        "securityConsiderations": [
+          "入力検証",
+          "秘密情報の非保存",
+          "依存・実行権限の監査"
+        ],
+        "monetization": "GUI",
+        "pricingHypothesis": "未設定。支払意思の検証前に価格・売上を断定しない",
+        "validationPlan": [
+          "対象顧客3者に課題を確認",
+          "既存サービスと日本語代替を調査",
+          "手動デモで価値を確認"
+        ],
+        "developmentPhases": [
+          "権利と需要の確認",
+          "1フローの試作",
+          "受入試験"
+        ],
+        "acceptanceCriteria": [
+          "ライセンス・依存・商標確認を記録",
+          "対象者が主要操作を完了",
+          "競合との差を根拠付きで説明",
+          "費用上限と停止手順が明確"
+        ]
+      },
+      "evidence": [
+        {
+          "id": "fixture-org/sample-002:metadata:1",
+          "source": "github",
+          "type": "metadata",
+          "url": "https://github.com/fixture-org/sample-002",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "Stars 200; open issues 12; size 1234 KiB。Starsは得点に使用しない。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-002:readme:2",
+          "source": "github",
+          "type": "readme",
+          "url": "https://github.com/fixture-org/sample-002",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "限定README確認: CLI手掛かり=true; 日本語手掛かり=false; 商用提供の用語=false; 高負荷領域の用語=false。用語検出であり製品の有無の断定ではない。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-002:license:3",
+          "source": "github",
+          "type": "license",
+          "url": "https://api.github.com/repos/fixture-org/sample-002/license",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "SPDX=MIT; ファイル確認=OK; 依存・商標は未確認。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-002:demand:4",
+          "source": "github",
+          "type": "demand",
+          "url": "https://github.com/fixture-org/sample-002/issues/1",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "要望関連語を検出。コメント 6、リアクション 10。否定・文脈は未解釈。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-002:demand:5",
+          "source": "github",
+          "type": "demand",
+          "url": "https://github.com/fixture-org/sample-002/issues/2",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "要望関連語を検出。コメント 3、リアクション 5。否定・文脈は未解釈。",
+          "weight": 1,
+          "confidence": 1
+        },
+        {
+          "id": "fixture-org/sample-002:issues:6",
+          "source": "github",
+          "type": "issues",
+          "url": "https://github.com/fixture-org/sample-002/issues",
+          "observedAt": "2026-09-20T10:00:00.000Z",
+          "status": "OK",
+          "summary": "取得状態=OK; 最大10件、需要関連語の検出2件。全Issueの調査ではない。",
+          "weight": 1,
+          "confidence": 1
+        }
+      ],
+      "isNew": true,
+      "firstSeen": "2026-09-20",
+      "scoreChange": null
+    }
+  ],
+  "top": [
+    "fixture-org/sample-000",
+    "fixture-org/sample-001",
+    "fixture-org/sample-002"
+  ],
+  "excluded": [],
+  "limitations": [
+    "全GitHubを網羅した探索ではない。検索結果と深掘り数に上限がある。",
+    "競合未調査はUNVERIFIED。日本語文書の不在を需要に換算しない。",
+    "AI不使用。商品化・MVPはテンプレート仮説。価格・売上・工数は未検証。",
+    "取得対象OSSの依存関係・商標は未監査。権利確認を完了した商品候補ではない。",
+    "暫定点は100点基準のまま。未評価配点を除いて満点へ換算しない。",
+    "Qiita・Zenn・Discussion・Release・言語別サイズは自動取得対象外。"
+  ]
+}

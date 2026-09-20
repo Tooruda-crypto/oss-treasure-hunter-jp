@@ -1,0 +1,23 @@
+{
+  "queries": [
+    { "track": "recent", "query": "topic:cli stars:100..30000 archived:false fork:false" },
+    { "track": "automation", "query": "topic:automation stars:100..30000 archived:false fork:false" }
+  ],
+  "maxCandidates": 100,
+  "metadataLimit": 100,
+  "deepLimit": 3,
+  "issuesPerRepo": 10,
+  "pagesPerQuery": 1,
+  "maxRequests": 30,
+  "timeoutMs": 10000,
+  "maxRunMs": 240000,
+  "retries": 1,
+  "maxWaitMs": 15000,
+  "minIntervalMs": 1100,
+  "topN": 10,
+  "retentionDays": 30,
+  "maxStorageBytes": 10000000,
+  "maxResponseBytes": 2000000,
+  "staleDays": 730,
+  "manualFile": "config/manual.json"
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "LOCAL_BROWSER_LIVE_DATA",
+  "browser": "143.0.7499.4",
+  "physicalDevice": false,
+  "remotePages": false,
+  "basePath": "/oss-treasure-hunter-jp/",
+  "candidates": 97,
+  "checks": [
+    {
+      "width": 320,
+      "status": "PASS"
+    },
+    {
+      "width": 375,
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "width": 768,
+      "status": "PASS"
+    },
+    {
+      "width": 1280,
+      "status": "PASS"
+    }
+  ]
+}

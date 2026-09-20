@@ -1,0 +1,50 @@
+[
+  {
+    "name": "checkout",
+    "tag": "v7.0.1",
+    "sha": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+    "license": "MIT",
+    "releaseUrl": "https://github.com/actions/checkout/releases/tag/v7.0.1",
+    "reviewedAt": "2026-09-20"
+  },
+  {
+    "name": "setup-node",
+    "tag": "v7.0.0",
+    "sha": "820762786026740c76f36085b0efc47a31fe5020",
+    "license": "MIT",
+    "releaseUrl": "https://github.com/actions/setup-node/releases/tag/v7.0.0",
+    "reviewedAt": "2026-09-20"
+  },
+  {
+    "name": "upload-artifact",
+    "tag": "v7.0.1",
+    "sha": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+    "license": "MIT",
+    "releaseUrl": "https://github.com/actions/upload-artifact/releases/tag/v7.0.1",
+    "reviewedAt": "2026-09-20"
+  },
+  {
+    "name": "download-artifact",
+    "tag": "v8.0.1",
+    "sha": "3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+    "license": "MIT",
+    "releaseUrl": "https://github.com/actions/download-artifact/releases/tag/v8.0.1",
+    "reviewedAt": "2026-09-20"
+  },
+  {
+    "name": "upload-pages-artifact",
+    "tag": "v5.0.0",
+    "sha": "fc324d3547104276b827a68afc52ff2a11cc49c9",
+    "license": "MIT",
+    "releaseUrl": "https://github.com/actions/upload-pages-artifact/releases/tag/v5.0.0",
+    "reviewedAt": "2026-09-20"
+  },
+  {
+    "name": "deploy-pages",
+    "tag": "v5.0.1",
+    "sha": "368f82528645a54fb793d4d04e342629a3f51346",
+    "license": "MIT",
+    "releaseUrl": "https://github.com/actions/deploy-pages/releases/tag/v5.0.1",
+    "reviewedAt": "2026-09-20"
+  }
+]
