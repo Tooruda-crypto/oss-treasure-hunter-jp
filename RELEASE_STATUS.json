@@ -1,13 +1,13 @@
 {
   "project": "OTH-JP",
   "version": "0.1.0",
-  "state": "PUBLICATION_APPROVED",
-  "meaning": "Final gate approved; local final audit and external release verification in progress",
-  "verifiedOn": "2026-09-20",
+  "state": "PUBLIC_RELEASED",
+  "meaning": "Public source, authenticated bounded survey, data persistence/restore, and GitHub Pages verified",
+  "verifiedOn": "2026-09-21",
   "specification": "OTH-JP-SPEC-001 v0.1",
   "executionScope": "OTH-JP-START-001 Free GitHub Release v0.1",
   "targetRepository": "Tooruda-crypto/oss-treasure-hunter-jp",
-  "targetDecision": "Public oss-treasure-hunter-jp authorized by the user; connected GitHub account used",
+  "targetDecision": "User-authorized public release to the single named repository",
   "licenseAdoption": "APPROVED",
   "automatedTests": {
     "pass": 49,
@@ -26,25 +26,96 @@
     1280
   ],
   "latestApiRun": {
-    "mode": "anonymous",
+    "mode": "GitHub Actions built-in read-only GITHUB_TOKEN",
+    "generatedAt": "2026-09-20T15:13:28.606Z",
     "scanned": 100,
-    "analyzed": 97,
+    "analyzed": 95,
     "deepAnalyzed": 3,
     "requests": 11,
-    "top": 1,
+    "top": 0,
     "status": "SUCCESS"
   },
   "paidOperations": 0,
-  "externalPublicationOperations": 1,
   "knownUnresolvedBlockers": [],
   "notTested": [
-    "authenticated_live_api",
-    "remote_ci",
-    "remote_daily_persistence_and_pages",
-    "physical_mobile_devices"
+    "first scheduled cron trigger (workflow_dispatch tested twice; schedule enabled at 07:23 JST)",
+    "physical mobile devices",
+    "other browsers and Windows"
   ],
   "license": "Apache-2.0",
   "repositoryCreated": true,
   "visibility": "public",
-  "freeStorageGate": "VERIFIED_EXISTING_ZERO_SPEND_LIMIT_NO_BILLING_CHANGES"
+  "freeStorageGate": "VERIFIED_EXISTING_ZERO_SPEND_LIMIT_NO_BILLING_CHANGES",
+  "verifiedAt": "2026-09-20T15:18:37.231154+00:00",
+  "releasedCodeCommit": "b68d3d7535701bad8610031609a70a8fa8e0a4c9",
+  "repositoryUrl": "https://github.com/Tooruda-crypto/oss-treasure-hunter-jp",
+  "pagesUrl": "https://tooruda-crypto.github.io/oss-treasure-hunter-jp/",
+  "remoteVerification": {
+    "ci": {
+      "status": "PASS",
+      "url": "https://github.com/Tooruda-crypto/oss-treasure-hunter-jp/actions/runs/35518772085"
+    },
+    "dailyInitial": {
+      "status": "PASS",
+      "url": "https://github.com/Tooruda-crypto/oss-treasure-hunter-jp/actions/runs/35518885226"
+    },
+    "dailyRestore": {
+      "status": "PASS",
+      "url": "https://github.com/Tooruda-crypto/oss-treasure-hunter-jp/actions/runs/35518993145",
+      "sameDayResult": "ALREADY_COMPLETE",
+      "additionalSurveyRequests": 0
+    },
+    "pages": {
+      "status": "PASS",
+      "httpStatus": 200,
+      "persistedJsonMatchesPublished": true
+    },
+    "browser": {
+      "status": "PASS",
+      "checks": [
+        "95 candidate cards",
+        "repository filter",
+        "detail navigation",
+        "detail direct reload",
+        "JSON/Markdown HTTP 200",
+        "visual inspection"
+      ]
+    },
+    "secretScan": {
+      "status": "PASS",
+      "filesScanned": 59,
+      "historyBlobsScanned": 67,
+      "findings": 0
+    }
+  },
+  "authentication": {
+    "push": "New Ed25519 repository-only read/write deploy key",
+    "privateKey": "Local-only, outside repository, owner-only access",
+    "sshHost": "Official GitHub Ed25519 host key pinned",
+    "patUsed": false,
+    "obsoletePat": "Deleted OTH-JP-publication after release verification",
+    "otherRepositoryManagementAccess": false,
+    "publicSurveyScope": "Public OSS metadata/README/LICENSE/issues are read as the product function; no other repository write/admin access"
+  },
+  "permissions": {
+    "ciAndCollect": [
+      "contents:read"
+    ],
+    "persist": [
+      "contents:write"
+    ],
+    "pages": [
+      "contents:read",
+      "pages:write",
+      "id-token:write"
+    ]
+  },
+  "billingChanges": 0,
+  "planChanges": 0,
+  "schedule": {
+    "cron": "23 22 * * *",
+    "timezone": "UTC",
+    "japanTime": "07:23",
+    "enabled": true
+  }
 }

@@ -2,7 +2,7 @@
 
 GitHubの公開OSSを限定調査し、日本向けの商品化仮説・根拠・ライセンス上の確認事項をまとめる、ローカル実行型のOSSです。
 
-本体は **[Apache-2.0](LICENSE)** です。公開先は [Tooruda-crypto/oss-treasure-hunter-jp](https://github.com/Tooruda-crypto/oss-treasure-hunter-jp)、Pagesの配信先は `https://tooruda-crypto.github.io/oss-treasure-hunter-jp/` です。実際の公開・検証状態は [RELEASE_STATUS.json](RELEASE_STATUS.json) を参照してください。`private: true` はnpmへの誤公開を防ぐために維持しています。
+本体は **[Apache-2.0](LICENSE)** です。公開先は [Tooruda-crypto/oss-treasure-hunter-jp](https://github.com/Tooruda-crypto/oss-treasure-hunter-jp)、公開画面は [GitHub Pages](https://tooruda-crypto.github.io/oss-treasure-hunter-jp/) です。実際の公開・検証状態は [RELEASE_STATUS.json](RELEASE_STATUS.json) を参照してください。`private: true` はnpmへの誤公開を防ぐために維持しています。
 
 English: A local-first, evidence-first OSS opportunity report generator for Japan. It uses bounded GitHub public REST requests, deterministic rules, and a static viewer. No paid API, hosted backend, AI API, tracking, or payment system is included. Ideas are hypotheses; missing evidence stays missing.
 
@@ -86,4 +86,4 @@ npm run report -- --input data/latest.json --output work/latest.md
 - [無料運用の確認範囲](docs/cost-safety.md)
 - [セキュリティ](SECURITY.md)、[第三者・ライセンス](THIRD_PARTY_NOTICES.md)
 
-GitHub上のCI・Actions・Pagesの実動作は公開ゲート後の検証項目です。workflowは公開Repositoryと2つの明示的な有効化変数を要求し、初期状態では日次処理・配信が起動しません。
+**PUBLIC_RELEASED**（2026-09-21 JST）。CI、認証付き実API、日次データの保存・復元、Pages公開を検証しました。[公開結果](docs/public-release.md)と[検証状態](RELEASE_STATUS.json)を参照してください。対象Repositoryでは無料条件確認済みの2変数を有効化しています。別Repositoryで導入する場合は無料条件を確認するまで有効化しないでください。

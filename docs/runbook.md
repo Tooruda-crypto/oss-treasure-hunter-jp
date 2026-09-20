@@ -42,7 +42,7 @@ GITHUB_TOKENのpushで別workflowが起動することを前提にしません�
 
 scheduleが動かない場合: default branch、2つの有効化変数、workflowの有効状態、Actions障害・遅延、権限、保存枠を確認します。公開Repositoryの60日無活動によるschedule無効化も確認します。必要なら所有者がworkflowを再有効化し、Actions → Daily public survey → Run workflowを実行します。最新runが緑でも、dataの最終成功日時と画面の最新試行状態を必ず確認します。PARTIALを完全成功とは扱いません。
 
-停止は `OTH_PUBLICATION_ENABLED=false` またはworkflowを無効化します。これは公開後に所有者が行う運用手順です。本作業では設定を変更していません。
+停止は `OTH_PUBLICATION_ENABLED=false` またはworkflowを無効化します。対象Repositoryでは2026-09-21 JSTに無料条件を確認し、2つの有効化変数をtrueに設定しました。停止時はこの手順を使用します。課金設定は変更していません。
 
 ## 保持容量
 
